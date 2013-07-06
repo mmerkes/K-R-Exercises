@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/* count lines in input */
 main() {
-	printf("EOF is %d\n", EOF);
+	int c, nl;
+
+	nl = 0;
+	while ((c = getchar()) != EOF)
+		if (c == '\n')
+			++nl;
+	printf("%d\n", nl);
 }
